@@ -1,0 +1,151 @@
+.main-container 
+{
+  position: relative;
+  width:600px;
+  height: 800px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  background-color: #d5ccac;
+  border-radius: 20px;
+  box-shadow: 0 6px 48px rgba(0, 0, 0, 0.12);
+}
+
+.title
+{
+  position: absolute;
+  top:30px;
+  left:50%;
+  transform: translate(-50%);
+  font-size: 60px;
+}
+
+button.returnButton
+{
+  position: absolute;
+  top:45px;
+  left:90%;
+  transform: translate(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: wheat;
+  transition: background-color 300ms ease, transform 200ms ease;
+  font-size: 20px;
+  color:red;
+}
+
+button.returnButton:hover
+{
+  background-color: red;
+  color: wheat;
+  transform: translate(-50%) scale(1.05);
+}
+
+.inputFields
+{
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  transform: translate(-50%);
+  padding: 0px 50px;
+}
+
+.emailInput
+{  
+  position: absolute;
+  width:200px;
+  height: 40px;
+  background-color:wheat;
+  border-radius: 8px;
+}
+
+.emailInput::placeholder
+{
+  position:absolute;
+  color:black;
+  left:2px;
+  opacity:50%;
+}
+
+.email
+{
+  position: absolute;
+  top:-30px;
+  font-size:30px;
+}
+
+.password
+{
+  position: absolute;
+  top:120px;
+  font-size:30px;
+}
+
+.passwordInput
+{  
+  position: absolute;
+  top:150px;
+  width:200px;
+  height: 40px;
+  background-color:wheat;
+  border-radius: 8px;
+}
+
+.passwordReqierments
+{
+  position: absolute;
+  width:600px;
+  top:200px;
+  font-size: 20px;
+}
+
+.confirmSignupButton
+{
+  position: absolute;
+  top:700px;
+  left:50%;
+  transform: translate(-50%);
+  width: 250px;
+  height: 62.5px;
+  border-radius: 8px;
+  background-color:wheat;
+  transition: background-color 300ms ease, transform 300ms ease;
+}
+
+.confirmSignupButton:hover
+{
+  background-color: rgb(73, 187, 60);
+  transform: translate(-50%) scale(1.02);
+}
+
+.setStyleFalse
+{
+  position:absolute;
+  top:100px;
+  color:red;
+  animation: slideIn 0.5s ease-out;
+}
+
+.setStyleCorrect
+{
+  position:absolute;
+  top:100px;
+  color:green;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn
+{
+  from
+  {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to
+  {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

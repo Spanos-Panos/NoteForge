@@ -1,0 +1,70 @@
+.main-container 
+{
+  position: relative;
+  width:600px;
+  height: 800px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  background-color: #d5ccac;
+  border-radius: 20px;
+  box-shadow: 0 6px 48px rgba(0, 0, 0, 0.12);
+}
+
+.title
+{
+  position: absolute;
+  top:30px;
+  left:50%;
+  transform: translate(-50%);
+  font-size: 60px;
+}
+
+.description
+{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top:180px;
+  padding: 0px  10px;
+  width: 500px;
+  font-size: 30px;
+  text-align: center;
+}
+
+button.LoginButton
+{
+  position: absolute;
+  top:400px;
+  left: 170;
+  width: 250px;
+  height: 62.5px;
+  border-radius: 8px;
+  background-color: wheat;
+  transition: background-color 300ms ease, transform 200ms ease;
+}
+
+button.LoginButton:hover
+{
+  background-color: rgb(209, 187, 146);
+  transform: scale(1.05);
+}
+
+button.SignUpButton
+{
+  position: absolute;
+  top:550px;
+  left: 170;
+  width: 250px;
+  height: 62.5px;
+  border-radius: 8px;
+  background-color: wheat;
+  transition: background-color 300ms ease, transform 200ms ease;
+}
+
+button.SignUpButton:hover
+{
+  background-color: rgb(209, 187, 146);
+  transform: scale(1.05);
+}
