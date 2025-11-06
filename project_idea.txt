@@ -1,0 +1,71 @@
+ok so let me describe you the project i want more so will know how we moving next.
+ so its gonna be a desktop application, when we open it we can see login / sign up
+ or if we have a accout we will skip this page , after we gonna have the main
+ menu , this gonna have those , out avatar/profile on the top corner , a setting
+ icon on the other top corner , in the settting we can change the theme
+ dark/light mode , sizes , aux things . in the middle i want 2 buttons . like
+ "Projects" and under it "Notes" on top of projects its gonna be the tittle. so on
+ the projects i want it to work like that .we can create a new project or keep
+ track/edit/delete etc a already existing one if we have one . so when we click
+ create project i want it so we can add . a picture for it.we gonna have a
+ preset of pictures, we can set a name for our project , a description , and
+ some notes , on the technical stuff we can change those.(we gonna have presets
+ for all the options).so we have some categories.
+frontend : we can choose languages , frameworks/libraries/styles/components
+ folders or websites etc , i want to cover almost everything
+backend: again a framework , libraries , languages i want to cover almost everything
+apis
+auth
+deploy
+dev tools
+Etc etc
+i want everycategory to COVER EVERYTHING , as much as we can . 
+so for each category i want something like a mix like we set the options will
+ clickble arrows like dropdown border with options , or some user input notes and
+ stuff
+so when the user set the picture , desciption , SCOPE(almost the most important
+ one) and the full stuck , he can click save and the program its gonna load and
+ right after (we gonna make a sick loading screen)we can see preview his project
+ organized. its gonna be like a open book
+Left page we can see his project / descriptions full stuck etc , and to the
+ right we can write down things and stuff like that . so we covered this thing .
+ i want something more advanced now . so now lets go back to notes button , i
+ want when the user press it to open again a book for notes , i want to cover
+ almost everything because that where people + me are weak , i want to have mini
+ paragraphs + how to + suggestions + requirements + even small pictures. so i
+ want it so we can cover everything . we gonna have as much as full
+ stucks(and not) as we can  .so we gonna have something like presets .lets take
+ for example this full stuck "Frontend	TypeScript + React + TailwindCSS	You’ll
+ build all UI/UX here — notebook theme, animations, etc. TypeScript gives type
+ safety, Tailwind makes styling easy and consistent.
+Backend	Next.js (with TypeScript)	Great choice — Next.js includes its own backend routes (/api) so you don’t even need a separate server at first. Perfect for fullstack in one project.
+Database	PostgreSQL	Strong relational DB, perfect for structured data like your projects, timers, notes, etc.
+ORM / Database Layer	Prisma	Connects your Next.js backend to PostgreSQL with auto-generated TypeScript types. Clean, safe, and modern.
+Auth	Supabase	Handles signup, login, sessions, and profiles. Works beautifully with Next.js and Prisma.
+API Style	REST API	Easy to start with. You can later evolve it into GraphQL if you want.
+Dev Tools	VS Code, GitHub, Postman	The essential trio for coding, version control, and API testing.
+Hosting	Vercel	Seamless for Next.js apps. You can deploy both your frontend and
+ backend in one click." so we gonna have something like how to create the
+ project stracture  , what and how to run on the cmd to run the project , how to
+ set it up.. on the notes things i dont want to only cover this full stuck , i
+ want it to include like project stracture , nite .Net , like simple html css js
+ websites , compponents . each of those can have more or less info. but i want
+ none of the above to be spesific,, so on the notes page we gonna have this ,
+ and somewhere i think its better either let the user write his own
+ sections(lets call all of the above sections , like .net section . typescript
+ section etc etc) or let the user have a free form writing page somewhere. so
+ now lets talk about some features i want to include 
+1st we can have some relaxing music plying with something like a disk image name
+ and artist on some corner , we can make it interactive with stop/play , next
+ prev ,and some other stuff
+2nd we can add a progress system on the projects tab , so we can set timers to
+ learn something , add like deadlines and some stuff like that(i thinks this have
+ to be a main thing and not a feature)
+3rd we can have something like rewarding system , like if the user complete or
+ study for the timer he has set or do something like a mission he can get some
+ coins to buy maybe some cosmetics , or if he dont complete he losses sum
+4.i want each section to have like different color or theme , 
+So overall we gonna have a full stuck project with projects and user and other
+ stuff connected to a database . i want the whole app to have a sketch , hand
+ drawing theme , like a notbook but with a unique style , like a "chalk" style.
+ how does this sound?
