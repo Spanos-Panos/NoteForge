@@ -1,0 +1,30 @@
+.mainContainer 
+{
+  position: relative;
+  width:600px;
+  height: 800px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  background-color: #d5ccac;
+  border-radius: 20px;
+  box-shadow: 0 6px 48px rgba(0, 0, 0, 0.12);
+}
+
+.ProjectButton
+{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 50px;
+  background-color: wheat;
+  border-radius: 8px;
+}
+
+.ProjectButton:hover
+{
+  cursor: pointer;
+}

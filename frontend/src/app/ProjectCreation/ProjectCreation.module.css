@@ -1,0 +1,31 @@
+.bookContainer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 0;
+    position: relative;
+}
+  
+.mainContainer 
+{
+  position: relative;
+  width: 600px;
+  height: 800px;
+  background-color: #d5ccac;
+  border-radius: 20px;
+  box-shadow: 0 6px 48px rgba(0, 0, 0, 0.12);
+}
+
+.middleBookLine
+{
+    position: relative;
+    background-color: #a26932;
+    z-index: 2;
+    width: 20px;
+    height: 800px;
+    border-radius: 20px;
+    flex-shrink: 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}

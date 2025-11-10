@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
-import { useRouter } from "next/navigation"; // ✅ correct import for App Router (Next.js 13+)
-import { supabase } from "@/lib/supabaseClient";
 import Home from "./Home/page";
+
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { supabase } from "@/lib/supabaseClient";
 
 function AuthCheckOnStart() {
   const router = useRouter();
@@ -19,7 +20,7 @@ function AuthCheckOnStart() {
 
       // If logged in and remember=true → go Home
       if (session && remember) {
-        router.push("/Home");
+        router.push("/Main");
         return;
       }
 
