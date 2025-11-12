@@ -1,0 +1,274 @@
+.container {
+  width: 100%;
+  background: wheat;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.3s ease;
+}
+
+.container:hover:not(.containerDisabled) {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: scale(1.01);
+}
+
+.containerDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Header Row: Checkbox + Label + Arrow Button */
+.headerRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Master Checkbox */
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+}
+
+.checkboxCustom {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  background-color: wheat;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.checkbox:checked + .checkboxCustom {
+  background-color: rgb(73, 187, 60);
+  border-color: rgb(73, 187, 60);
+  transform: scale(1.1);
+}
+
+.checkboxLabel:hover .checkboxCustom {
+  border-color: #a26932;
+}
+
+.checkbox:checked + .checkboxCustom:hover {
+  border-color: rgb(73, 187, 60);
+}
+
+.checkmark {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  animation: checkAnimation 0.3s ease;
+}
+
+@keyframes checkAnimation {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.labelWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+}
+
+/* Expand/Collapse Arrow Button */
+.expandButton {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid #000000;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.expandButton:hover {
+  background: rgba(162, 105, 50, 0.2);
+  transform: scale(1.05);
+}
+
+.expandButton:active {
+  transform: scale(0.95);
+}
+
+.expandArrow {
+  width: 20px;
+  height: 20px;
+  color: #a26932;
+  transition: transform 0.3s ease;
+}
+
+.expandArrow.expandArrowOpen {
+  transform: rotate(180deg);
+}
+
+.description {
+  margin: 8px 0 0 36px;
+  font-size: 14px;
+  color: black;
+  opacity: 0.7;
+  line-height: 1.4;
+}
+
+/* Collapsed Hint */
+.collapsedHint {
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: rgba(162, 105, 50, 0.1);
+  border-radius: 6px;
+  font-size: 14px;
+  color: #a26932;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Fields Container */
+.fieldsContainer {
+  margin-top: 16px;
+  animation: fadeIn 0.3s ease;
+  /* Layout controlled by inline styles from getGridStyle() */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Individual Field Item */
+.fieldItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 150px;
+}
+
+/* Field Header (individual checkbox + label) */
+.fieldHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.fieldCheckboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fieldCheckbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+}
+
+.fieldCheckboxCustom {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #000000;
+  border-radius: 3px;
+  background-color: wheat;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.fieldCheckbox:checked + .fieldCheckboxCustom {
+  background-color: rgb(73, 187, 60);
+  border-color: rgb(73, 187, 60);
+  transform: scale(1.1);
+}
+
+.fieldCheckboxLabel:hover .fieldCheckboxCustom {
+  border-color: #a26932;
+}
+
+.fieldCheckmark {
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.fieldLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: black;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 12px;
+  }
+
+  .headerRow {
+    gap: 10px;
+  }
+
+  .label {
+    font-size: 16px;
+  }
+
+  .fieldsContainer.horizontal {
+    flex-direction: column;
+  }
+
+  .fieldItem {
+    width: 100%;
+    min-width: auto;
+  }
+}

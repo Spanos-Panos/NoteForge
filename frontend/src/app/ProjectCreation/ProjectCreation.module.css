@@ -29,3 +29,39 @@
     flex-shrink: 0;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
+
+.projectImage
+{
+  position: absolute;
+  left:50%;
+  top:5%;
+  transform: translate(-50%);
+}
+
+.projectNameInput
+{
+  position:absolute;
+  left:50%;
+  top:25%;
+  transform: translate(-50%);
+  width:400px;
+}
+
+.textAreaInput
+{
+  position: absolute;
+  left:50%;
+  top:35%;
+  transform: translate(-50%);
+  width: 400px;
+}
+
+.frontendOptions
+{
+  position: absolute;
+  position: absolute;
+  left: 47.5%;
+  top:5%;
+  transform: translate(-50%);
+  width: 500px;
+}

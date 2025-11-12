@@ -1,0 +1,243 @@
+.textInputContainer {
+  position: relative;
+  width: 100%;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: wheat;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.inputWrapper:hover:not(.disabled) {
+  background-color: #f5deb3;
+  transform: scale(1.01);
+}
+
+.inputWrapper.focused {
+  background-color: wheat;
+  border-color: #a26932;
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.inputWrapper.error {
+  border-color: red;
+  background-color: #ffe5e5;
+}
+
+.inputWrapper.error.focused {
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);
+}
+
+.inputWrapper.disabled {
+  background: #e0d5b7;
+  border-color: #999;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.input {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  font-family: inherit;
+  color: black;
+  outline: none;
+  width: 100%;
+}
+
+.input::placeholder {
+  color: black;
+  opacity: 0.5;
+}
+
+.input:disabled {
+  cursor: not-allowed;
+  color: #666;
+}
+
+.charCount {
+  position: absolute;
+  right: 16px;
+  font-size: 12px;
+  color: black;
+  opacity: 0.6;
+  background: wheat;
+  padding: 2px 6px;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.charCount.overLimit {
+  color: red;
+  font-weight: 600;
+  opacity: 1;
+}
+
+.requiredIndicator {
+  position: absolute;
+  right: 8px;
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+.errorMessage {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  font-size: 16px;
+  color: red;
+  animation: slideIn 0.5s ease-out;
+}
+
+.errorIcon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* Suggestions Dropdown */
+.suggestionsDropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: wheat;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  box-shadow: 0 6px 48px rgba(0, 0, 0, 0.12);
+  max-height: 250px;
+  overflow: hidden;
+  z-index: 1000;
+  animation: slideUp 0.3s ease;
+}
+
+.suggestionsHeader {
+  padding: 10px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: #f5deb3;
+  border-bottom: 1px solid #000000;
+}
+
+.suggestionsList {
+  max-height: 200px;
+  overflow-y: auto;
+  background: wheat;
+}
+
+.suggestionItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 16px;
+  color: black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.suggestionItem:last-child {
+  border-bottom: none;
+}
+
+.suggestionItem:hover,
+.suggestionItem.selected {
+  background: #f5deb3;
+  transform: scale(1.02);
+}
+
+.suggestionItem.selected {
+  background: rgb(73, 187, 60);
+  color: white;
+  font-weight: 500;
+}
+
+.suggestionIcon {
+  width: 18px;
+  height: 18px;
+  color: #a26932;
+  flex-shrink: 0;
+}
+
+/* Hide scrollbar but keep functionality */
+.suggestionsList::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+
+.suggestionsList {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Dark mode - keeping same wheat theme for consistency */
+@media (prefers-color-scheme: dark) {
+  /* Keeping the same wheat/tan theme even in dark mode for brand consistency */
+  /* If you want different dark mode styles, uncomment and customize below */
+  
+  /* .inputWrapper {
+    background: #4a3f2f;
+    border-color: #666;
+  } */
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .input {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 12px 16px;
+  }
+
+  .suggestionsDropdown {
+    max-height: 200px;
+  }
+
+  .suggestionsList {
+    max-height: 150px;
+  }
+
+  .suggestionItem {
+    padding: 10px 14px;
+    font-size: 15px;
+  }
+}
+

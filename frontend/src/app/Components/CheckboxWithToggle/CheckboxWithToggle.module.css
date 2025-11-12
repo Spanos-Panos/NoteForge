@@ -1,0 +1,150 @@
+.container {
+  width: 100%;
+  background: wheat;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.3s ease;
+}
+
+.container:hover:not(.disabled) {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: scale(1.01);
+}
+
+.container.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.header {
+  margin-bottom: 16px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+}
+
+.checkboxCustom {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  background-color: wheat;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.checkbox:checked + .checkboxCustom {
+  background-color: rgb(73, 187, 60);
+  border-color: rgb(73, 187, 60);
+  transform: scale(1.1);
+}
+
+.checkbox:disabled + .checkboxCustom {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.checkboxLabel:hover .checkboxCustom {
+  border-color: #a26932;
+}
+
+.checkbox:checked + .checkboxCustom:hover {
+  border-color: rgb(73, 187, 60);
+}
+
+.checkmark {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.labelText {
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.description {
+  margin: 8px 0 0 44px;
+  font-size: 14px;
+  color: black;
+  opacity: 0.7;
+  line-height: 1.5;
+}
+
+.content {
+  padding-left: 34px;
+  transition: opacity 0.3s ease;
+}
+
+.contentDisabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Animations */
+@keyframes checkAnimation {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.checkbox:checked + .checkboxCustom .checkmark {
+  animation: checkAnimation 0.3s ease;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 12px;
+  }
+
+  .labelText {
+    font-size: 16px;
+  }
+
+  .content {
+    padding-left: 20px;
+  }
+
+  .description {
+    margin-left: 36px;
+    font-size: 13px;
+  }
+}
+
